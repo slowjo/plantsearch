@@ -22,7 +22,7 @@ const SearchResultsItem = ({ result, handleClick }) => {
                         sx={{ background: 'lightgreen', color: 'white' }}
                     />
                     <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h5" component="div" sx={{ fontStyle: 'italic' }}>
                         {result.name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">

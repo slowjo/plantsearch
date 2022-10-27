@@ -14,7 +14,7 @@ const SearchResultsList = () => {
 
     return (
         <section id="search-results" style={{ marginTop: '2rem', marginBottom: '2rem' }}>
-            {!isLoading && !error && (
+            {!isLoading && !error && data && (
                 <h2>{data?.results?.filter((result) => result.rank === 'Species').length || '0'} Results</h2>
             )}
             {isLoading && (

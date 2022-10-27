@@ -5,13 +5,14 @@ import SearchResultsList from '../components/searchresults/SearchResultsList';
 // import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';
 import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
 
 const SearchPage = () => {
     const { handleSubmit } = useContext(AppContext);
 
     return (
         <section>
-            <h1>Search a plant!</h1>
+            <Typography variant='h1' component='h1' sx={{ textAlign: 'center', my: '3rem' }}>Search a plant!</Typography>
             <form onSubmit={handleSubmit}>
                 <div style={{ position: 'relative' }}>
                 {/* <div style={{ display: 'flex', width: '100%' }}> */}
