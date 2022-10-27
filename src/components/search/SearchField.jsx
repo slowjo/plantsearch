@@ -3,7 +3,7 @@ import AppContext from '../../context/AppContext';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import InputAdornment from '@mui/material/InputAdornment';
-import OutlinedInput from '@mui/material/OutlinedInput';
+// import OutlinedInput from '@mui/material/OutlinedInput';
 import Button from '@mui/material/Button';
 import { plantlist } from '../../data/plantlist';
 
