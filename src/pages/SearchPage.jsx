@@ -3,8 +3,8 @@ import AppContext from '../context/AppContext';
 import SearchField from '../components/search/SearchField';
 import SearchResultsList from '../components/searchresults/SearchResultsList';
 // import Button from '@mui/material/Button';
-import SearchIcon from '@mui/icons-material/Search';
-import IconButton from '@mui/material/IconButton';
+// import SearchIcon from '@mui/icons-material/Search';
+// import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
 const SearchPage = () => {
