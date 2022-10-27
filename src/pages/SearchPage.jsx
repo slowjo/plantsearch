@@ -12,7 +12,7 @@ const SearchPage = () => {
 
     return (
         <section>
-            <Typography variant='h1' component='h1' sx={{ textAlign: 'center', mt: '0.5em', lineHeight: 1.7 }}>InfoPlant</Typography>
+            <Typography variant='h1' component='h1' sx={{ textAlign: 'center', mt: '0.5em', lineHeight: 1.7, fontSize: 'calc(5vw + 3rem)' }}>InfoPlant</Typography>
             <Typography variant='h4' component='h2' sx={{ textAlign: 'center', mb: '1em' }} color="text.secondary">Search a plant!</Typography>
             <form onSubmit={handleSubmit}>
                 <div style={{ position: 'relative' }}>
