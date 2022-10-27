@@ -4,7 +4,7 @@ import L from "leaflet";
 import data from '../../data/countries.json';
 import { styleByCountry } from './colorFunc';
 
-function Shapefile({ countries }) {
+function Shapefile({ countries, countryNames }) {
   // console.log(data);
 
   const map = useMap();
@@ -29,7 +29,7 @@ function Shapefile({ countries }) {
     //   geo.addData(data);
     // });
 
-    L.geoJson(data, { style: (feature) => styleByCountry(feature, countries) }).addTo(map);
+    L.geoJson(data, { style: (feature) => styleByCountry(feature, countries, countryNames) }).addTo(map);
   }, [countries]);
 
   return null;

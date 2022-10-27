@@ -15,6 +15,7 @@ const IndividualDisplay = () => {
     const { isLoading, error, data } = useQuery(['individualRecord', pickedPlantId], () => getPowoIndividual(pickedPlantId));
 
     const [countries, setCountries] = useState([]);
+    const [countryNames, setCountryNames] = useState([]);
 
     console.log(data);
 
@@ -23,6 +24,8 @@ const IndividualDisplay = () => {
             const countriesArray = data.distribution?.natives?.map((item) => item.tdwgCode) || [];
             // console.log(countriesArray);
             setCountries(countriesArray);
+            const countryNamesArray = data.distribution?.natives?.map((item) => item.name) || [];
+            setCountryNames(countryNamesArray);
         }
     }, [data]);
 
@@ -39,7 +42,7 @@ const IndividualDisplay = () => {
             )}
             <h2>Native Distribution</h2>
             <Paper>
-                <ReactLeafletMap countries={countries} />
+                <ReactLeafletMap countries={countries} countryNames={countryNames} />
             </Paper>
         </div>
     );
