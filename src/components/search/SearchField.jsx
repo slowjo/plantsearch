@@ -7,7 +7,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import Button from '@mui/material/Button';
 import { plantlist } from '../../data/plantlist';
 
-const SearchField = () => {
+const SearchField = ({ inputRef }) => {
     const { searchFieldValue, handleSearchFieldValueChange } = useContext(AppContext);
 
     return (
@@ -18,7 +18,8 @@ const SearchField = () => {
                 id="species-name-search"
                 freeSolo
                 options={plantlist.map((option) => option)}
-                renderInput={(params) => <TextField {...params} label="Species name" InputProps={{
+                renderInput={(params) => <TextField {...params} label="Species name" 
+                InputProps={{
                     ...params.InputProps,
                     endAdornment:
                     <>
@@ -29,7 +30,8 @@ const SearchField = () => {
                         </Button>
                     </InputAdornment>
                     </>,
-                    style: { borderRadius: '200px', paddingLeft: '20px' } 
+                    style: { borderRadius: '200px', paddingLeft: '20px' },
+                    ref: inputRef, 
                 }}
                 />}
             />
