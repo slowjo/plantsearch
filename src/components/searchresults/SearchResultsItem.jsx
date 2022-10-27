@@ -13,7 +13,7 @@ const SearchResultsItem = ({ result, handleClick }) => {
     return (
         <Grid item xs={12} sm={6} md={4} onClick={() => handleClick(result.fqId, result.images)} sx={{ cursor: 'pointer' }}>
             <Link to={`/species/${result.fqId}`} style={{ textDecoration: 'none', }}>
-                <Card>
+                <Card variant="outlined">
                     <CardMedia
                         component="img"
                         height="140"

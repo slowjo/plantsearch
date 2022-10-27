@@ -48,7 +48,7 @@ const IndividualDisplay = () => {
             </section>
             <h2>Native Distribution</h2>
             {data && data.distribution ? (
-                <Paper>
+                <Paper variant='outlined'>
                     <ReactLeafletMap countries={countries} countryNames={countryNames} />
                 </Paper>
             ) : (
