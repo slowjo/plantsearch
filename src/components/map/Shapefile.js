@@ -30,6 +30,7 @@ function Shapefile({ countries, countryNames }) {
     // });
 
     L.geoJson(data, { style: (feature) => styleByCountry(feature, countries, countryNames) }).addTo(map);
+    // eslint-disable-next-line
   }, [countries]);
 
   return null;

@@ -1,6 +1,6 @@
-const IPNI_URL = 'http://beta.ipni.org/api/1'
-const POWO_URL = 'http://www.plantsoftheworldonline.org/api/2'
-const KPL_URL = 'http://kewplantlist.org/api/v1'
+// const IPNI_URL = 'http://beta.ipni.org/api/1'
+// const POWO_URL = 'http://www.plantsoftheworldonline.org/api/2'
+// const KPL_URL = 'http://kewplantlist.org/api/v1'
 
 export const getPowo = (searchTerm) => {
     console.log(searchTerm);
