@@ -41,6 +41,11 @@ const IndividualDisplay = () => {
             {pickedPlantImages && pickedPlantImages.length > 0 && (
                 <img src={pickedPlantImages[0].thumbnail} alt={data && data.name} />
             )}
+            <section id="description">
+                {data && (
+                    <p>{data.name} is a {data.lifeform} plant species from the {data.family} family. It grows in areas with {data.climate} climate</p>
+                )}
+            </section>
             <h2>Native Distribution</h2>
             <Paper>
                 <ReactLeafletMap countries={countries} countryNames={countryNames} />
