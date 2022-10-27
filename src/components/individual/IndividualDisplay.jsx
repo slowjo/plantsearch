@@ -47,9 +47,13 @@ const IndividualDisplay = () => {
                 )}
             </section>
             <h2>Native Distribution</h2>
-            <Paper>
-                <ReactLeafletMap countries={countries} countryNames={countryNames} />
-            </Paper>
+            {data && data.distribution ? (
+                <Paper>
+                    <ReactLeafletMap countries={countries} countryNames={countryNames} />
+                </Paper>
+            ) : (
+                <h3>No distrubution data available</h3>
+            )}
         </div>
     );
 };
