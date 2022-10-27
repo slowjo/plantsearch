@@ -12,7 +12,8 @@ import Paper from '@mui/material/Paper';
 const IndividualDisplay = () => {
     const { pickedPlantId, pickedPlantImages } = useContext(AppContext);
 
-    const { isLoading, error, data } = useQuery(['individualRecord', pickedPlantId], () => getPowoIndividual(pickedPlantId));
+    // const { isLoading, error, data } = useQuery(['individualRecord', pickedPlantId], () => getPowoIndividual(pickedPlantId));
+    const { data } = useQuery(['individualRecord', pickedPlantId], () => getPowoIndividual(pickedPlantId));
 
     const [countries, setCountries] = useState([]);
     const [countryNames, setCountryNames] = useState([]);
