@@ -14,7 +14,8 @@ const SearchPage = () => {
 
     const handleSubmitAndBlur = (e) => {
         handleSubmit(e);
-        inputRef.current.firstChild.blur();
+        // inputRef.current.firstChild.blur();
+        inputRef.current.querySelector('input').blur();
     };
 
     return (

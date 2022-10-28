@@ -19,19 +19,20 @@ const SearchField = ({ inputRef }) => {
                 freeSolo
                 options={plantlist.map((option) => option)}
                 renderInput={(params) => <TextField {...params} label="Species name" 
+                ref={inputRef}
                 InputProps={{
                     ...params.InputProps,
                     endAdornment:
                     <>
                     {params.InputProps.endAdornment}
                     <InputAdornment position='end'>
-                    	<Button variant='contained' type='submit' sx={{ borderRadius: '200px', boxShadow: 'none' }}>
+                    	<Button variant='contained' type='submit' sx={{ borderRadius: '200px', boxShadow: 'none', '&:hover': { boxShadow: 'none' }, '&:focus' : { boxShadow: 'none' } }}>
                             Search
                         </Button>
                     </InputAdornment>
                     </>,
                     style: { borderRadius: '200px', paddingLeft: '20px' },
-                    ref: inputRef, 
+                    
                 }}
                 />}
             />
