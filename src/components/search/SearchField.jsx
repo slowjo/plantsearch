@@ -32,7 +32,6 @@ const SearchField = ({ inputRef }) => {
                     </InputAdornment>
                     </>,
                     style: { borderRadius: '200px', paddingLeft: '20px' },
-                    
                 }}
                 />}
             />
