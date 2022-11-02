@@ -27,6 +27,7 @@ const AppState = ({ children }) => {
             searchTerm,
             pickedPlantId,
             pickedPlantImages,
+            setSearchTerm,
             handleSearchFieldValueChange,
             handleSubmit,
             handleIndividualClick,

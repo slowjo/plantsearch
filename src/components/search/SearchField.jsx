@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import AppContext from '../../context/AppContext';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -8,13 +8,23 @@ import Button from '@mui/material/Button';
 import { plantlist } from '../../data/plantlist';
 
 const SearchField = ({ inputRef }) => {
-    const { searchFieldValue, handleSearchFieldValueChange } = useContext(AppContext);
+    const { searchFieldValue, handleSearchFieldValueChange, setSearchTerm } = useContext(AppContext);
+
+    const handleChange = (e, newValue) => {
+        setSearchTerm(newValue);
+        inputRef.current.querySelector('input').blur();
+    };
+
+    const [showButton, setShowButton] = useState(true);
 
     return (
         <div style={{ flex: 1 }}>
             <Autocomplete
                 inputValue={searchFieldValue} 
                 onInputChange={handleSearchFieldValueChange}
+                onChange={handleChange}
+                onFocus={() => {setShowButton(false)}}
+                onBlur={() => {setShowButton(true)}}
                 id="species-name-search"
                 freeSolo
                 options={plantlist.map((option) => option)}
@@ -25,13 +35,16 @@ const SearchField = ({ inputRef }) => {
                     endAdornment:
                     <>
                     {params.InputProps.endAdornment}
-                    <InputAdornment position='end'>
-                    	<Button variant='contained' type='submit' sx={{ borderRadius: '200px', boxShadow: 'none', '&:hover': { boxShadow: 'none' }, '&:focus' : { boxShadow: 'none' } }}>
-                            Search
-                        </Button>
-                    </InputAdornment>
+                    {showButton && (
+                        <InputAdornment position='end'>
+                            <Button variant='contained' type='submit' sx={{ borderRadius: '200px', boxShadow: 'none', '&:hover': { boxShadow: 'none' }, '&:focus' : { boxShadow: 'none' } }}>
+                                Search
+                            </Button>
+                        </InputAdornment>
+                    )}
                     </>,
-                    style: { borderRadius: '200px', paddingLeft: '20px' },
+                    style: { borderRadius: '200px', paddingLeft: '20px', paddingTop: '5px', paddingRight: '7px', paddingBottom: '5px',
+                    '::placeholder': { marginLeft: '50px' } },
                 }}
                 />}
             />

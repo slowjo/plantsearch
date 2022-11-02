@@ -14,12 +14,18 @@ img {
 
 .MuiAutocomplete-hasPopupIcon .MuiOutlinedInput-root, .MuiAutocomplete-hasClearIcon .MuiOutlinedInput-root {
   margin-right: 0 !important;
-  padding-right: 9px !important;
+  padding-right: 7px !important;
 }
 
 .MuiAutocomplete-endAdornment {
   display: flex;
   order: revert;
   position: relative !important;
-  right: 0 !important;
+  /* right: 0 !important; */
+}
+
+.MuiFormLabel-root,
+.MuiInputLabel-root {
+  left: 10px !important;
+  top: -2.5px !important;
 }
