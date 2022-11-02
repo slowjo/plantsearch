@@ -12,6 +12,17 @@ img {
   max-width: 100%;
 }
 
+.plantbackground::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(99, 192, 85, 1) 5%, rgba(99, 192, 85, 0.7) 35%, rgba(255, 255, 255, 0));
+    height: 100%;
+}
+
 .MuiAutocomplete-hasPopupIcon .MuiOutlinedInput-root, .MuiAutocomplete-hasClearIcon .MuiOutlinedInput-root {
   margin-right: 0 !important;
   padding-right: 7px !important;

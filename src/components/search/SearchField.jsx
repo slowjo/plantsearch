@@ -6,6 +6,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 // import OutlinedInput from '@mui/material/OutlinedInput';
 import Button from '@mui/material/Button';
 import { plantlist } from '../../data/plantlist';
+import { useTheme } from '@mui/material/styles';
 
 const SearchField = ({ inputRef }) => {
     const { searchFieldValue, handleSearchFieldValueChange, setSearchTerm } = useContext(AppContext);
@@ -16,6 +17,8 @@ const SearchField = ({ inputRef }) => {
     };
 
     const [showButton, setShowButton] = useState(true);
+
+    const theme = useTheme();
 
     return (
         <div style={{ flex: 1 }}>
@@ -43,8 +46,8 @@ const SearchField = ({ inputRef }) => {
                         </InputAdornment>
                     )}
                     </>,
-                    style: { borderRadius: '200px', paddingLeft: '20px', paddingTop: '5px', paddingRight: '7px', paddingBottom: '5px',
-                    '::placeholder': { marginLeft: '50px' } },
+                    style: { borderRadius: '200px', paddingLeft: '20px', paddingTop: '5px', paddingRight: '7px', paddingBottom: '5px', background: theme.palette.background.default,
+                    }
                 }}
                 />}
             />

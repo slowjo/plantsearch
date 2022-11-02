@@ -6,6 +6,8 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import { useQuery } from 'react-query';
 import { getPowo } from '../../app/api/my-api';
+import Container from '@mui/material/Container';
+
 
 const SearchResultsList = () => {
     const { handleIndividualClick, searchTerm } = useContext(AppContext);
@@ -14,6 +16,7 @@ const SearchResultsList = () => {
 
     return (
         <section id="search-results" style={{ marginTop: '2rem', marginBottom: '2rem' }}>
+            <Container>
             {!isLoading && !error && data && (
                 <h2>{data?.results?.filter((result) => result.rank === 'Species').length || '0'} Results</h2>
             )}
@@ -34,6 +37,7 @@ const SearchResultsList = () => {
                     })}
                 </Grid>
             )}
+            </Container>
         </section>        
     );
 };

@@ -1,9 +1,12 @@
 import IndividualDisplay from "../components/individual/IndividualDisplay";
+import Container from '@mui/material/Container';
 
 const IndividualPage = () => {
     return (
         <section>
-            <IndividualDisplay />
+            <Container>
+                <IndividualDisplay />
+            </Container>
         </section>
     );
 };

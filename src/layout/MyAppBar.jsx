@@ -6,12 +6,15 @@ import Typography from '@mui/material/Typography';
 // import IconButton from '@mui/material/IconButton';
 // import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
+import { useTheme } from '@mui/material/styles';
 
 const MyAppBar = () => {
+    const theme = useTheme();
+
     return (
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" elevation={0}>
-          <Toolbar>
+        <AppBar position="static" elevation={0} sx={{ backgroundColor: theme.palette.background.default }}>
+          <Toolbar sx={{ backgroundColor: theme.palette.background.default }}>
             {/* <IconButton
               size="large"
               edge="start"
@@ -22,7 +25,7 @@ const MyAppBar = () => {
               <MenuIcon />
             </IconButton> */}
             <Link to='/' style={{ flexGrow: 1, color: 'white', textDecoration: 'none' }}>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: theme.palette.primary.main }}>
                 InfoPlant
               </Typography>
             </Link>
