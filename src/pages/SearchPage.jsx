@@ -36,8 +36,8 @@ const SearchPage = () => {
         >
             <img src={plantImage} alt="a green leafy plant" style={{ gridRow: '1 / 2', gridColumn: '1', marginTop: '7em' }} />
             <Container style={{ gridRow: '1', gridColumn: '1', zIndex: 10 }}>
-                <Typography variant='h1' component='h1' sx={{ textAlign: 'center', lineHeight: 1.7, fontSize: 'calc(5vw + 3rem)' }}>InfoPlant</Typography>
-                <Typography variant='h4' component='h2' sx={{ textAlign: 'center', mb: '1em' }} color="text.secondary">Search a plant!</Typography>
+                <Typography variant='h1' component='h1' sx={{ textAlign: 'center', lineHeight: 1.7, fontSize: 'calc(5vw + 3rem)', color: 'white' }}>InfoPlant</Typography>
+                <Typography variant='h4' component='h2' sx={{ textAlign: 'center', mb: '1em', color: 'white' }} color="text.secondary">Search a plant!</Typography>
                 <form onSubmit={handleSubmitAndBlur}>
                     <div style={{ position: 'relative' }}>
                     {/* <div style={{ display: 'flex', width: '100%' }}> */}

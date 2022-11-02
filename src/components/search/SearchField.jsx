@@ -40,7 +40,7 @@ const SearchField = ({ inputRef }) => {
                     {params.InputProps.endAdornment}
                     {showButton && (
                         <InputAdornment position='end'>
-                            <Button variant='contained' type='submit' sx={{ borderRadius: '200px', boxShadow: 'none', '&:hover': { boxShadow: 'none' }, '&:focus' : { boxShadow: 'none' } }}>
+                            <Button variant='contained' type='submit' sx={{ color: 'white', borderRadius: '200px', boxShadow: 'none', '&:hover': { boxShadow: 'none' }, '&:focus' : { boxShadow: 'none' } }}>
                                 Search
                             </Button>
                         </InputAdornment>
