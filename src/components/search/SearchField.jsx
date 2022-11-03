@@ -7,11 +7,15 @@ import InputAdornment from '@mui/material/InputAdornment';
 import Button from '@mui/material/Button';
 import { plantlist } from '../../data/plantlist';
 import { useTheme } from '@mui/material/styles';
+import { useNavigate } from "react-router-dom";
 
 const SearchField = ({ inputRef }) => {
     const { searchFieldValue, handleSearchFieldValueChange, setSearchTerm } = useContext(AppContext);
 
+    const navigate = useNavigate();
+
     const handleChange = (e, newValue) => {
+        navigate('/searchresults');
         setSearchTerm(newValue);
         inputRef.current.querySelector('input').blur();
     };

@@ -1,7 +1,7 @@
 import { useContext, useRef } from 'react';
 import AppContext from '../context/AppContext';
 import SearchField from '../components/search/SearchField';
-import SearchResultsList from '../components/searchresults/SearchResultsList';
+// import SearchResultsList from '../components/searchresults/SearchResultsList';
 // import Button from '@mui/material/Button';
 // import SearchIcon from '@mui/icons-material/Search';
 // import IconButton from '@mui/material/IconButton';
@@ -10,13 +10,18 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import plantImage from './plant1.jpg';
 import Box from '@mui/material/Box';
+import { useNavigate } from "react-router-dom";
 
 const SearchPage = () => {
     const { handleSubmit } = useContext(AppContext);
 
     const inputRef = useRef();
 
+    const navigate = useNavigate();
+
     const handleSubmitAndBlur = (e) => {
+        console.log('submit');
+        navigate('/searchresults');
         handleSubmit(e);
         // inputRef.current.firstChild.blur();
         inputRef.current.querySelector('input').blur();
@@ -51,7 +56,7 @@ const SearchPage = () => {
                 </form>
             </Container>
         </section>
-        <SearchResultsList />
+        {/* <SearchResultsList /> */}
         </>
     );
 };

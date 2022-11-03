@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import SearchPage from "../pages/SearchPage";
 import IndividualPage from "../pages/IndividualPage";
+import ResultsPage from '../pages/ResultsPage';
 
 export const router = createBrowserRouter([
     {
@@ -10,12 +11,16 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <SearchPage />
+                element: <SearchPage />,
             },
             {
                 path: '/species/:speciesId',
-                element: <IndividualPage />
-            }
-        ]
+                element: <IndividualPage />,
+            },
+            {
+                path: '/searchresults',
+                element: <ResultsPage />,
+            },
+        ],
     },
 ]);
