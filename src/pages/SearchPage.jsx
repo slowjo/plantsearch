@@ -1,16 +1,12 @@
 import { useContext, useRef } from 'react';
 import AppContext from '../context/AppContext';
 import SearchField from '../components/search/SearchField';
-// import SearchResultsList from '../components/searchresults/SearchResultsList';
-// import Button from '@mui/material/Button';
-// import SearchIcon from '@mui/icons-material/Search';
-// import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-// import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import plantImage from './plant1.jpg';
 import Box from '@mui/material/Box';
 import { useNavigate } from "react-router-dom";
+import InfoBoxGrid from '../components/landing/InfoBoxGrid';
 
 const SearchPage = () => {
     const { handleSubmit } = useContext(AppContext);
@@ -56,7 +52,7 @@ const SearchPage = () => {
                 </form>
             </Container>
         </section>
-        {/* <SearchResultsList /> */}
+        <InfoBoxGrid />
         </>
     );
 };
