@@ -20,6 +20,13 @@ const SearchField = ({ inputRef }) => {
         inputRef.current.querySelector('input').blur();
     };
 
+    const handleClick = (e) => {
+        if (searchFieldValue.trim() === '') return;
+        navigate('/searchresults');
+        setSearchTerm(searchFieldValue);
+        inputRef.current.querySelector('input').blur();
+    }
+
     const [showButton, setShowButton] = useState(true);
 
     const theme = useTheme();
@@ -44,7 +51,7 @@ const SearchField = ({ inputRef }) => {
                     {params.InputProps.endAdornment}
                     {showButton && (
                         <InputAdornment position='end'>
-                            <Button variant='contained' type='submit' sx={{ color: 'white', borderRadius: '200px', boxShadow: 'none', '&:hover': { boxShadow: 'none' }, '&:focus' : { boxShadow: 'none' } }}>
+                            <Button variant='contained' onClick={handleClick} type='submit' sx={{ color: 'white', borderRadius: '200px', boxShadow: 'none', '&:hover': { boxShadow: 'none' }, '&:focus' : { boxShadow: 'none' } }}>
                                 Search
                             </Button>
                         </InputAdornment>
