@@ -57,7 +57,7 @@ const SearchField = ({ inputRef }) => {
                         </InputAdornment>
                     )}
                     </>,
-                    style: { borderRadius: '200px', paddingLeft: '20px', paddingTop: '5px', paddingRight: '7px', paddingBottom: '5px', background: theme.palette.background.default,
+                    style: { borderRadius: '200px', paddingLeft: '20px', paddingTop: '5px', paddingRight: '5px', paddingBottom: '5px', background: theme.palette.background.default,
                     }
                 }}
                 />}

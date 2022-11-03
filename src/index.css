@@ -25,7 +25,7 @@ img {
 
 .MuiAutocomplete-hasPopupIcon .MuiOutlinedInput-root, .MuiAutocomplete-hasClearIcon .MuiOutlinedInput-root {
   margin-right: 0 !important;
-  padding-right: 7px !important;
+  padding-right: 5px !important;
 }
 
 .MuiAutocomplete-endAdornment {
