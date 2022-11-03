@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 // import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import plantImage from './plant1.jpg';
+import Box from '@mui/material/Box';
 
 const SearchPage = () => {
     const { handleSubmit } = useContext(AppContext);
@@ -34,8 +35,10 @@ const SearchPage = () => {
                 position: 'relative',
             }}
         >
-            <img src={plantImage} alt="a green leafy plant" style={{ gridRow: '1 / 2', gridColumn: '1', marginTop: '7em' }} />
-            <Container style={{ gridRow: '1', gridColumn: '1', zIndex: 10 }}>
+            <Box sx={{ gridRow: '1 / 2', gridColumn: '1', maxHeight: '75vh', overflow: 'hidden', marginTop: { xs: '7em', sm: '0px' } }}>
+                <img src={plantImage} alt="a green leafy plant" />
+            </Box>
+            <Container sx={{ paddingTop: { xs: '0px', md: '3em' }}} style={{ gridRow: '1', gridColumn: '1', zIndex: 10 }}>
                 <Typography variant='h1' component='h1' sx={{ textAlign: 'center', lineHeight: 1.7, fontSize: 'calc(5vw + 3rem)', color: 'white' }}>InfoPlant</Typography>
                 <Typography variant='h4' component='h2' sx={{ textAlign: 'center', mb: '1em', color: 'white' }} color="text.secondary">Search a plant!</Typography>
                 <form onSubmit={handleSubmitAndBlur}>

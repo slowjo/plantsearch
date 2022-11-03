@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 // import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
+import GrassIcon from '@mui/icons-material/Grass';
 
 const MyAppBar = () => {
     const theme = useTheme();
@@ -24,7 +25,8 @@ const MyAppBar = () => {
             >
               <MenuIcon />
             </IconButton> */}
-            <Link to='/' style={{ flexGrow: 1, color: 'white', textDecoration: 'none' }}>
+            <Link to='/' style={{ flexGrow: 1, color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+              <GrassIcon sx={{ color: theme.palette.primary.main }} />
               <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: theme.palette.primary.main }}>
                 InfoPlant
               </Typography>
