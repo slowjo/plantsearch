@@ -6,8 +6,6 @@ import { useTheme } from '@mui/material/styles';
 import { infoBoxData } from '../../data/infoBoxData';
 
 const InfoBoxGrid = () => {
-    const infos = [1, 2, 3];
-
     const theme = useTheme();
 
     return (
