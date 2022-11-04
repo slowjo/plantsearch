@@ -32,7 +32,7 @@ const SearchField = ({ inputRef }) => {
     const theme = useTheme();
 
     return (
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1, maxWidth: '700px', marginInline: 'auto' }}>
             <Autocomplete
                 inputValue={searchFieldValue} 
                 onInputChange={handleSearchFieldValueChange}
